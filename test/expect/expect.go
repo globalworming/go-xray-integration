@@ -2,7 +2,7 @@ package expect
 
 import (
 	"context"
-	"example/xray-integration/step"
+	"example/xray-integration/test/step"
 	"github.com/chromedp/chromedp"
 )
 

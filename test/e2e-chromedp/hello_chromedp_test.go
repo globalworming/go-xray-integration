@@ -1,9 +1,9 @@
-package main
+package e2e_chromedp
 
 import (
 	"context"
-	"example/xray-integration/expect"
-	"example/xray-integration/step"
+	"example/xray-integration/test/expect"
+	"example/xray-integration/test/step"
 	"github.com/chromedp/chromedp"
 	"testing"
 )
