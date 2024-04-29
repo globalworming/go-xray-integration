@@ -21,7 +21,7 @@ func SetupBrowserContext(t *testing.T) (context.Context, context.CancelFunc) {
 	return ctx, cancel
 }
 
-func TestWhereWeOrderSuccssfully(t *testing.T) {
+func TestWhereWeOrderSuccessfully(t *testing.T) {
 	ctx, cancel := SetupBrowserContext(t)
 	defer cancel()
 
