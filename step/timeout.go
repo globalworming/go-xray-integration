@@ -6,10 +6,10 @@ import (
 	"time"
 )
 
-func RunWithTimeOut(timeout time.Duration, tasks chromedp.Tasks) chromedp.ActionFunc {
+func RunWithTimeOut(timeout time.Duration, action chromedp.Action) chromedp.ActionFunc {
 	return func(ctx context.Context) error {
 		timeoutContext, cancel := context.WithTimeout(ctx, timeout*time.Second)
 		defer cancel()
-		return tasks.Do(timeoutContext)
+		return action.Do(timeoutContext)
 	}
 }

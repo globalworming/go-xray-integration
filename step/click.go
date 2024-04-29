@@ -6,15 +6,11 @@ import (
 )
 
 func Click(ctx context.Context, sel string, query func(s *chromedp.Selector)) {
-	Perform(ctx, RunWithTimeOut(3, chromedp.Tasks{
-		chromedp.Click(sel, query),
-	}))
+	Perform(ctx, RunWithTimeOut(3, chromedp.Click(sel, query)))
 }
 
 func ClickPrimaryButton(ctx context.Context) {
-	Perform(ctx, RunWithTimeOut(3, chromedp.Tasks{
-		chromedp.Click(`.btn_primary`, chromedp.ByQuery),
-	}))
+	Perform(ctx, RunWithTimeOut(3, chromedp.Click(`.btn_primary`, chromedp.ByQuery)))
 }
 
 func ClickOnHeaderCart(ctx context.Context) {

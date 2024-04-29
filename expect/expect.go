@@ -7,8 +7,5 @@ import (
 )
 
 func OrderSuccessful(ctx context.Context) {
-
-	step.Perform(ctx, step.RunWithTimeOut(3, chromedp.Tasks{
-		chromedp.WaitVisible("h2.complete-header", chromedp.ByQuery),
-	}))
+	step.Perform(ctx, step.RunWithTimeOut(3, chromedp.WaitVisible("h2.complete-header", chromedp.ByQuery)))
 }
